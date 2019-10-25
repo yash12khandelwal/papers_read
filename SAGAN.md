@@ -33,16 +33,23 @@ Method:
 
 	Image features from the previous hidden layer are first transformed into 2 feature spaces; f and g to calulate the attention.
 
-	The term beta indicates the extent to which the model attends to the ith location when synthesizing the jth region. It is the attention map which is then multiplied with the feature space h and gives attention map by 1 * 1 convolution over the matrix multiplication output.
+	The term beta indicates the extent to which the model attends to the ith location when synthesizing the jth region. It is the attention map which is then multiplied with the feature space h and gives self-attention map(Oj) by 1 * 1 convolution over the matrix multiplication output.
 
 	The final output is prepared by multiplying the attention map with a scale factor and adding back to the input feature map.
 
 	Initially scaling factor in initalized as 0, this allows the network to firstly rely on the cues in locacl neighbourhood since this is easier for model to learn and the gradually learn to assing more weight to the non local evidence. Intution is that we want to learn the easy task first and then progressively incrase the complexity of the task.
 
-
 	While implementing spectral normalization for both generator and discriminator it has been emprirically found that it is possible to use fewer discriminator updates per generator update. This significantly reduces the cost of training. This approach shows more stable training.
 
 	They also propose using sperate learning rates (TTUR) for discriminator and generator specifically to compensate the problem of slow training of regularized discriminator, also making it possible to use fewer discriminator steps per generator steps.
+	
+
+	
+![Attention map formula](https://github.com/yash12khandelwal/papers_read/blob/master/images/SAGAN.png)
+
+![Self-Attention Map formula](https://github.com/yash12khandelwal/papers_read/blob/master/images/SAGAN1.png)
+
+![Model architecture](https://github.com/yash12khandelwal/papers_read/blob/master/images/SAGAN2.png)
 
 ### Any further details
 
