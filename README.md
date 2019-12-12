@@ -7,3 +7,7 @@
 3) [pix2pix - Image to Image Translation with Conditional Adversial Networks](https://github.com/yash12khandelwal/papers_read/blob/master/pix2pix.md)
 
 4) [SinGAN: Learning a Generative Model from a Single Natural Image](https://github.com/yash12khandelwal/papers_read/blob/master/SINGAN.md)
+
+
+To Read:
+[Emergence of Object Segmentation in Perturbed Generative Models](https://arxiv.org/pdf/1905.12663)
